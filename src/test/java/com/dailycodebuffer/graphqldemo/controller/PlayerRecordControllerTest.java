@@ -1,6 +1,7 @@
 package com.dailycodebuffer.graphqldemo.controller;
 
 import com.dailycodebuffer.graphqldemo.model.Player;
+import com.dailycodebuffer.graphqldemo.model.PlayerRecord;
 import com.dailycodebuffer.graphqldemo.model.Team;
 import com.dailycodebuffer.graphqldemo.service.PlayerService;
 import org.junit.jupiter.api.Assertions;
@@ -10,11 +11,9 @@ import org.springframework.boot.test.autoconfigure.graphql.GraphQlTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.graphql.test.tester.GraphQlTester;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @Import(PlayerService.class)
 @GraphQlTest(PlayerController.class)
-class PlayerControllerTest {
+class PlayerRecordControllerTest {
 
     @Autowired
     GraphQlTester tester;
@@ -37,7 +36,7 @@ class PlayerControllerTest {
         tester.document(document)
                 .execute()
                 .path("findAll")
-                .entityList(Player.class)
+                .entityList(PlayerRecord.class)
                 .hasSizeGreaterThan(3);
     }
 
@@ -57,10 +56,10 @@ class PlayerControllerTest {
                 .variable("id",1)
                 .execute()
                 .path("findOne")
-                .entity(Player.class)
-                .satisfies(player -> {
-                    Assertions.assertEquals("MS Dhoni", player.name());
-                    Assertions.assertEquals(Team.CSK, player.team());
+                .entity(PlayerRecord.class)
+                .satisfies(playerRecord -> {
+                    Assertions.assertEquals("MS Dhoni", playerRecord.name());
+                    Assertions.assertEquals(Team.CSK, playerRecord.team());
                 });
     }
 
@@ -101,10 +100,10 @@ class PlayerControllerTest {
                 .variable("team", Team.RCB)
                 .execute()
                 .path("create")
-                .entity(Player.class)
-                .satisfies(player -> {
-                    Assertions.assertEquals("Virat Kohli", player.name());
-                    Assertions.assertEquals(Team.RCB, player.team());
+                .entity(PlayerRecord.class)
+                .satisfies(playerRecord -> {
+                    Assertions.assertEquals("Virat Kohli", playerRecord.name());
+                    Assertions.assertEquals(Team.RCB, playerRecord.team());
                 });
 
         Assertions.assertEquals(currentCount + 1 , playerService.findAll().size());
@@ -127,11 +126,11 @@ class PlayerControllerTest {
                 .variable("team", Team.CSK)
                 .execute()
                 .path("update")
-                .entity(Player.class);
+                .entity(PlayerRecord.class);
 
-        Player updatePlayer = playerService.findOne(3).get();
-        Assertions.assertEquals("Updated Jasprit Bumrah", updatePlayer.name());
-        Assertions.assertEquals(Team.CSK, updatePlayer.team());
+        Player updatePlayerRecord = playerService.findOne("3");
+        Assertions.assertEquals("Updated Jasprit Bumrah", updatePlayerRecord.getName());
+        Assertions.assertEquals(Team.CSK, updatePlayerRecord.getTeam());
     }
 
     @Test
