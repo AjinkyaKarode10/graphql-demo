@@ -22,3 +22,8 @@ type Mutation {
     create(playerId:String, name: String, team: Team): Player
     update(playerId: String, name: String, team: Team): Player
 }
+
+type Subscription {
+    playerCreated: Player
+    playerUpdated: Player
+}
