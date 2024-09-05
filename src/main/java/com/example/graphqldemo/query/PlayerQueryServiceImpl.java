@@ -1,7 +1,7 @@
-package com.dailycodebuffer.graphqldemo.query;
+package com.example.graphqldemo.query;
 
-import com.dailycodebuffer.graphqldemo.model.Player;
-import com.dailycodebuffer.graphqldemo.resolver.PlayerQueryResolver;
+import com.example.graphqldemo.model.Player;
+import com.example.graphqldemo.resolver.PlayerQueryResolver;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

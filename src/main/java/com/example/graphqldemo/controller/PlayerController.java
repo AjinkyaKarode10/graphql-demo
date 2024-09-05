@@ -1,10 +1,10 @@
-package com.dailycodebuffer.graphqldemo.controller;
+package com.example.graphqldemo.controller;
 
-import com.dailycodebuffer.graphqldemo.command.PlayerCommandServiceImpl;
-import com.dailycodebuffer.graphqldemo.query.PlayerQueryServiceImpl;
-import com.dailycodebuffer.graphqldemo.model.Player;
-import com.dailycodebuffer.graphqldemo.model.Team;
-import com.dailycodebuffer.graphqldemo.resolver.PlayerSubscriptionResolver;
+import com.example.graphqldemo.command.PlayerCommandServiceImpl;
+import com.example.graphqldemo.query.PlayerQueryServiceImpl;
+import com.example.graphqldemo.model.Player;
+import com.example.graphqldemo.model.Team;
+import com.example.graphqldemo.resolver.PlayerSubscriptionResolver;
 import jakarta.annotation.PostConstruct;
 import org.reactivestreams.Publisher;
 import org.springframework.beans.factory.annotation.Autowired;

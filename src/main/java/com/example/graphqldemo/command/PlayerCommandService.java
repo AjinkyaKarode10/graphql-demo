@@ -1,7 +1,7 @@
-package com.dailycodebuffer.graphqldemo.command;
+package com.example.graphqldemo.command;
 
-import com.dailycodebuffer.graphqldemo.model.Player;
-import com.dailycodebuffer.graphqldemo.model.Team;
+import com.example.graphqldemo.model.Player;
+import com.example.graphqldemo.model.Team;
 
 public interface PlayerCommandService {
     public Player createPlayer(String playerId, String name, Team team);

@@ -1,4 +1,4 @@
-package com.dailycodebuffer.graphqldemo.config;
+package com.example.graphqldemo.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;

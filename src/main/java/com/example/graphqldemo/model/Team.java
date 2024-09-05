@@ -1,4 +1,4 @@
-package com.dailycodebuffer.graphqldemo.model;
+package com.example.graphqldemo.model;
 
 public enum Team {
     CSK,

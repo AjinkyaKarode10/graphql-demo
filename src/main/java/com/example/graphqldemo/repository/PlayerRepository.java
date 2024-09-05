@@ -1,7 +1,6 @@
-package com.dailycodebuffer.graphqldemo.repository;
+package com.example.graphqldemo.repository;
 
-import com.dailycodebuffer.graphqldemo.model.Player;
-import com.dailycodebuffer.graphqldemo.model.PlayerRecord;
+import com.example.graphqldemo.model.Player;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;

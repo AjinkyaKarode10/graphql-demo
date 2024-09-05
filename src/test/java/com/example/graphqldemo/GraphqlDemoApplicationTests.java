@@ -1,4 +1,4 @@
-package com.dailycodebuffer.graphqldemo;
+package com.example.graphqldemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,9 +1,8 @@
-package com.dailycodebuffer.graphqldemo.service;
+package com.example.graphqldemo.service;
 
-import com.dailycodebuffer.graphqldemo.model.Player;
-import com.dailycodebuffer.graphqldemo.model.PlayerRecord;
-import com.dailycodebuffer.graphqldemo.model.Team;
-import com.dailycodebuffer.graphqldemo.repository.PlayerRepository;
+import com.example.graphqldemo.model.Player;
+import com.example.graphqldemo.model.Team;
+import com.example.graphqldemo.repository.PlayerRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

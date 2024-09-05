@@ -1,9 +1,9 @@
-package com.dailycodebuffer.graphqldemo.controller;
+package com.example.graphqldemo.controller;
 
-import com.dailycodebuffer.graphqldemo.model.Player;
-import com.dailycodebuffer.graphqldemo.model.PlayerRecord;
-import com.dailycodebuffer.graphqldemo.model.Team;
-import com.dailycodebuffer.graphqldemo.service.PlayerService;
+import com.example.graphqldemo.model.Player;
+import com.example.graphqldemo.model.PlayerRecord;
+import com.example.graphqldemo.model.Team;
+import com.example.graphqldemo.service.PlayerService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

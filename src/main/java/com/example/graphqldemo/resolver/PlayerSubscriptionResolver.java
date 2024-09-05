@@ -1,7 +1,6 @@
-package com.dailycodebuffer.graphqldemo.resolver;
+package com.example.graphqldemo.resolver;
 
-import com.dailycodebuffer.graphqldemo.model.Player;
-import com.dailycodebuffer.graphqldemo.repository.PlayerRepository;
+import com.example.graphqldemo.model.Player;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 
